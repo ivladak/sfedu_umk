@@ -1,4 +1,4 @@
-\documentclass[fontsize=14pt]{scrartcl} %
+\documentclass[fontsize=12pt]{scrartcl} %
 
 \usepackage {cmap}
 \usepackage [T2A] {fontenc}
@@ -22,8 +22,6 @@
 \frenchspacing
 \parindent=1.25cm
 
-
-% Поля
 \usepackage %
 [ %
   left = 2.5cm,
@@ -78,47 +76,69 @@
 % титульная страница РПД
 \AtBeginDocument %
 { %
+\newgeometry{left=0.6cm,right=1.5cm,top=2cm,bottom=1.27cm}
   \thispagestyle {empty}
   %
   \begin{spacing}{1.1}
   \begin {center}
     %
     {\small
-    \textsc{Минобрнауки России}
+    \textsc{Федеральное агентство научных организаций}
 
     \vgap
-    Федеральное государственное автономное образовательное
-    учреждение высшего профессионального образования
+    Федеральное государственное бюджетное учреждение науки\\
+    Институт системного программирования\\
+    Российской академии наук
 
-    \textsc{Южный федеральный университет}
-
-    \vgap
-    Институт математики, механики и компьютерных наук им.~И.\,И.~Воровича}
+	}
     %
   \end {center}
   %
     \vgap
-	\hfill
-	\begin{minipage}{0.45\textwidth}\small
-	\hfill УТВЕРЖДАЮ
 
-	\vspace{.3cm}
-	Руководитель направления
 
-	\vspace{1cm}
-        \hspace{2.7cm}/
+	\begin{minipage}[t]{0.48\textwidth}
+	    \begin{flushleft}
+		    Одобрено решением учёного совета ИСП~РАН
 
-	\hrule
+		    Протокол заседания №\uline{.6cm} от \uline{3cm}
 
-	\vspace{.2cm}
-        \hspace{.3cm} (\emph{подпись}) \hfill (\emph{Ф.И.О.}) \hspace{1.5cm}
+		    Председатель учёного совета ИСП~РАН
 
-	\vspace{.5\baselineskip}
-	<<\uline{\widthof{XXXX}}>> \uline{\widthof{XXXXXXXXXXXXXXXX}}
-         20\ugap\,г.
+		    Д.ф.-м.н, академик
+
+		    В.П.~Иванников
+	    \end{flushleft}
+	\end{minipage}%
+%
+	\begin{minipage}[t]{0.48\textwidth}\small
+
+		\begin{flushright}
+			УТВЕРЖДАЮ
+
+			\vspace{.3cm}
+
+			Директор ИСП~РАН \\
+			д.ф.-м.н
+
+
+
+		    \uline{\widthof{XXXXXXXX}}~~~~/~~~А.И.~Аветисян
+
+
+			\vspace{-.1cm}
+		    (\emph{подпись}) ~~~~~~~~~~~~~~~~~~ (\emph{  Ф.И.О.})
+
+		<<\uline{\widthof{XXXX}}>> \uline{\widthof{XXXXXXXXXXXXXXXX}}
+	         2016 г.
+
+	         		\end{flushright}
+
 	\end{minipage}
 
-  \vgap\vgap
+
+  \vspace {\fill}
+
   \begin {center}
     {\large\bfseries
     \textsc{Рабочая программа дисциплины}
@@ -137,38 +157,31 @@
     \vgap
     Форма обучения \ulinepad{\theform}
 
-    \vgap\vgap
-    {\small
-    \begin{tabularx}{\textwidth}{p{0.4\textwidth}X}
-        \centering Программа разработана
-                & \uline{5cm}\hfill \theshortname{} \thedignity{}\\
-        \\
-                & \multicolumn{1}{>{\raggedright}X}{\raggedright
-                Рекомендована к утверждению на заседании кафедры
-                \thebychair{}}
-                \\
-        \\
-                & Протокол заседания №\uline{.6cm} от \uline{3cm}\\[1cm]
-                &
-                \begin{tabular}{@{}lcc}
-                Зав. кафедрой   & \hspace{2.5cm}   & \hfill В.\,С.~Пилиди\\\cline{2-3}
-                                &(\emph{подпись})      & (\emph{Ф.И.О.})\\
-                \end{tabular}
-    \end{tabularx}
-    }
+
 
   \end {center}
+
+    \vspace {\fill}
+
+    Курс обучения: \uline{\widthof{XXXX}}
+
+    Семестр обучения: \uline{\widthof{XXXX}}
+
+  	Составители: \theshortname{} \thedignity{}
+
   %
   \vspace {\fill}
   %
   \begin {center}
     %
-    Ростов-на-Дону~--- \thedate
+    Москва~\thedate~г.
     %
   \end {center}
   %
   \end{spacing}
+
   \clearpage\normalsize
+  \restoregeometry
 } %
 
 % Настройка списков
